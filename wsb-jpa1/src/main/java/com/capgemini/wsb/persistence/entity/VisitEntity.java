@@ -17,7 +17,7 @@ public class VisitEntity {
 	@Column(nullable = false)
 	private LocalDateTime time;
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "DOCTOR_ID")
 	private DoctorEntity doctorEntity;
 
