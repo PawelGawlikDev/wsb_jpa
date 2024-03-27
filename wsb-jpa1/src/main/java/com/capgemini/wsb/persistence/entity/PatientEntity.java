@@ -34,6 +34,9 @@ public class PatientEntity {
 	@Column(nullable = false)
 	private LocalDate dateOfBirth;
 
+	@Column(nullable = false)
+	private int pesel;
+
 	public Long getId() {
 		return id;
 	}
@@ -89,5 +92,10 @@ public class PatientEntity {
 	public void setDateOfBirth(LocalDate dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
-
+	public int getPesel() {
+		return pesel;
+	}
+	public void setPesel(int pesel) {
+		this.pesel = pesel;
+	}
 }

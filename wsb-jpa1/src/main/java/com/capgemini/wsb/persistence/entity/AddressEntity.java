@@ -67,4 +67,16 @@ public class AddressEntity {
 		this.postalCode = postalCode;
 	}
 
+	public DoctorEntity getDoctorEntity() {return  doctorEntity;}
+
+	public void setDoctorEntity(DoctorEntity doctor) {
+		this.doctorEntity = doctor;
+	}
+
+	public PatientEntity getPatientEntity() {return patientEntity;}
+
+	public void setPatientEntity(PatientEntity patient) {
+		this.patientEntity = patient;
+	}
+
 }
