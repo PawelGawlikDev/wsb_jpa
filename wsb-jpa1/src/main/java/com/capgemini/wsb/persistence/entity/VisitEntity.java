@@ -22,7 +22,7 @@ public class VisitEntity {
 	private DoctorEntity doctorEntity;
 
 	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name = "Patient_ID")
+	@JoinColumn(name = "PATIENT_ID")
 	private PatientEntity patientEntity;
 
 	public Long getId() {
@@ -47,6 +47,22 @@ public class VisitEntity {
 
 	public void setTime(LocalDateTime time) {
 		this.time = time;
+	}
+
+	public DoctorEntity getDoctorEntity() {
+		return doctorEntity;
+	}
+
+	public void setDoctorEntity(DoctorEntity doctorEntity) {
+		this.doctorEntity = doctorEntity;
+	}
+
+	public PatientEntity getPatientEntity() {
+		return patientEntity;
+	}
+
+	public void setPatientEntity(PatientEntity patientEntity) {
+		this.patientEntity = patientEntity;
 	}
 
 }

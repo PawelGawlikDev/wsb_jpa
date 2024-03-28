@@ -1,7 +1,11 @@
 package com.capgemini.wsb.dto;
 
+import com.capgemini.wsb.persistence.entity.VisitEntity;
+
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 public class PatientTO implements Serializable
 {
@@ -20,6 +24,8 @@ public class PatientTO implements Serializable
     private LocalDate dateOfBirth;
 
     private int pesel;
+
+    private Set<VisitEntity> visites = new HashSet<>();
 
     public Long getId() {
         return id;
@@ -81,5 +87,13 @@ public class PatientTO implements Serializable
     }
     public void setPesel(int pesel) {
         this.pesel = pesel;
+    }
+
+    public Set<VisitEntity> getVisites() {
+        return visites;
+    }
+
+    public void setVisites(Set<VisitEntity> visites) {
+        this.visites = visites;
     }
 }

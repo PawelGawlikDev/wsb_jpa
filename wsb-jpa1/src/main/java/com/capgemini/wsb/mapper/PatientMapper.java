@@ -17,10 +17,11 @@ public final class PatientMapper
         patientTO.setFirstName(patientEntity.getFirstName());
         patientTO.setLastName(patientEntity.getLastName());
         patientTO.setTelephoneNumber(patientEntity.getTelephoneNumber());
-        patientTO.setEmail(patientTO.getEmail());
+        patientTO.setEmail(patientEntity.getEmail());
         patientTO.setPatientNumber(patientEntity.getPatientNumber());
         patientTO.setDateOfBirth(patientEntity.getDateOfBirth());
         patientTO.setPesel(patientEntity.getPesel());
+        patientTO.setVisites(patientEntity.getVisites());
         return  patientTO;
     }
 
@@ -39,6 +40,7 @@ public final class PatientMapper
         patientEntity.setPatientNumber(patientTO.getPatientNumber());
         patientEntity.setDateOfBirth(patientTO.getDateOfBirth());
         patientEntity.setPesel(patientTO.getPesel());
+        patientEntity.setVisites(patientTO.getVisites());
         return patientEntity;
     }
 }
