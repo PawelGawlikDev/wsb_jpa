@@ -2,6 +2,7 @@ package com.capgemini.wsb.service.impl;
 
 import com.capgemini.wsb.dto.PatientTO;
 import com.capgemini.wsb.mapper.PatientMapper;
+import com.capgemini.wsb.persistence.dao.AddressDao;
 import com.capgemini.wsb.persistence.dao.PatientDao;
 import com.capgemini.wsb.persistence.entity.PatientEntity;
 import com.capgemini.wsb.service.PatientService;
@@ -15,11 +16,13 @@ import org.springframework.transaction.annotation.Transactional;
 public class PatientServiceImpl implements PatientService
 {
     private final PatientDao PatientDao;
+    private final AddressDao AddressDao;
 
     @Autowired
-    public PatientServiceImpl(PatientDao pPatientDao)
+    public PatientServiceImpl(PatientDao patientDao, AddressDao addressDao)
     {
-        PatientDao = pPatientDao;
+        PatientDao = patientDao;
+        AddressDao = addressDao;
     }
 
     @Override
@@ -31,7 +34,9 @@ public class PatientServiceImpl implements PatientService
 
     }
 
-    public void deleteById(Long id) {
 
+    public void deleteById(Long id) {
+        AddressDao.delete(id);
+        PatientDao.delete(id);
     }
 }

@@ -2,8 +2,9 @@ insert into doctor (id, doctor_number, email, first_name, last_name, specializat
 insert into doctor (id, doctor_number, email, first_name, last_name, specialization, telephone_number) values (2, '987654321', 'anna.nowak@email.com', 'Anna', 'Nowak', 'GP', '2');
 
 
-insert into patient values (1, '1990-01-01', 'pacjent.jeden@email.com', 'Pacjent', 'Jeden', '1', '555555555', 12345678911);
-insert into patient values (2, '1995-02-02', 'pacjentka.dwa@email.com', 'Pacjentka', 'Dwa', '2', '333333333', 11987654321);
+insert into patient (id, date_of_birth, email, first_name, last_name, patient_number, telephone_number, pesel)
+values (1, '1990-01-01', 'pacjent.jeden@email.com', 'Pacjent', 'Jeden', '1', '555555555', 123456789),
+       (2, '1995-02-02', 'pacjentka.dwa@email.com', 'Pacjentka', 'Dwa', '2', '333333333', 119876543);
 
 insert into address values (1, 'xx', 'yy', 'city', '62-030', 1, 1);
 insert into address values (2, 'xxx', 'yyy', 'Wrocław', '54-080', 1, 2);
