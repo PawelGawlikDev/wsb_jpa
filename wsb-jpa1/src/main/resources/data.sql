@@ -12,6 +12,10 @@ insert into address values (2, 'xxx', 'yyy', 'Wrocław', '54-080', 1, 2);
 INSERT INTO visit (id, description, time, doctor_id, patient_id)
 VALUES (1, 'Przyjęcie kontrolne', '2024-03-27', 1, 1);
 INSERT INTO visit (id, description, time, doctor_id, patient_id)
+VALUES (3, 'Wizyta 2', '2024-04-27', 1, 1);
+INSERT INTO visit (id, description, time, doctor_id, patient_id)
+VALUES (4, 'Wizyta 3', '2024-05-27', 1, 1);
+INSERT INTO visit (id, description, time, doctor_id, patient_id)
 VALUES (2, 'Operacja', '2024-06-22', 1, 2);
 
 INSERT INTO medical_treatment (id, description, type, visit_id)
