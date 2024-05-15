@@ -1,7 +1,8 @@
-package com.capgemini.wsb.service;
+package test.capgemini.wsb.service;
 
 import com.capgemini.wsb.dto.PatientTO;
 import com.capgemini.wsb.persistence.entity.PatientEntity;
+import com.capgemini.wsb.service.PatientService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
