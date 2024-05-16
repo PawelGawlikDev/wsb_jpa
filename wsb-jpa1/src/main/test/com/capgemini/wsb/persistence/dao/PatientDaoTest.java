@@ -1,4 +1,4 @@
-package test.capgemini.wsb.persistance.dao;
+package com.capgemini.wsb.persistence.dao;
 
 import com.capgemini.wsb.persistence.dao.PatientDao;
 import com.capgemini.wsb.persistence.entity.PatientEntity;

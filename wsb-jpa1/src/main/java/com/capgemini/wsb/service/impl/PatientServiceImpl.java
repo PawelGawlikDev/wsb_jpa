@@ -5,10 +5,13 @@ import com.capgemini.wsb.mapper.PatientMapper;
 import com.capgemini.wsb.persistence.dao.AddressDao;
 import com.capgemini.wsb.persistence.dao.PatientDao;
 import com.capgemini.wsb.persistence.entity.PatientEntity;
+import com.capgemini.wsb.persistence.entity.VisitEntity;
 import com.capgemini.wsb.service.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.Set;
 
 
 @Service
@@ -38,5 +41,11 @@ public class PatientServiceImpl implements PatientService
     public void deleteById(Long id) {
         AddressDao.delete(id);
         PatientDao.delete(id);
+    }
+
+    @Override
+    public Set<VisitEntity> findAllPatientVisites (final Long id) {
+        final PatientEntity entity = PatientDao.findOne(id);
+        return entity.getVisites();
     }
 }
